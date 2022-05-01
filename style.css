@@ -1,12 +1,12 @@
 * {
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   box-sizing: border-box;
 }
 
 body {
   margin: 0 auto;
   padding: 3px;
-  background-color: #fff;
+  background-color: rgb(35, 44, 51);
 }
 
 .game-container {
@@ -17,7 +17,7 @@ body {
 
 header {
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .rounds {
@@ -77,7 +77,7 @@ header {
 }
 
 .computer-guess {
-  background-color: #ececec;
+  background-color: #263d47;
 }
 
 #computer-guess {
@@ -151,7 +151,7 @@ header {
   font-size: 14px;
 }
 
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
@@ -164,7 +164,7 @@ input[type=number]::-webkit-inner-spin-button {
   margin-right: auto;
   margin-bottom: 60px;
 }
-  
+
 .button[disabled] {
   background-color: #d2d2d2;
   color: #a0a0a0;
@@ -188,8 +188,8 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 14px;
 }
 
-
-.winning-text, .winning-text[disabled] {
+.winning-text,
+.winning-text[disabled] {
   color: #ec3636;
   font-weight: 700;
 }
