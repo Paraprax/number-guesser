@@ -36,12 +36,14 @@ const compareGuesses = (userNum, compNum, targetNum) => {
   return outcome;
 };
 
-// console.log(compareGuesses(7, 5, 8));
-
 const updateScore = (winner) => {
-  if ((winner = "human")) {
+  if ((winner == "human")) {
     humanScore++;
   } else {
     computerScore++;
   }
+};
+
+const advanceRound = () => {
+  currentRoundNumber++;
 };
