@@ -2,28 +2,27 @@ let humanScore = 0;
 let computerScore = 0;
 let currentRoundNumber = 1;
 
-// Write your code below:
 const generateTarget = () => {
   return Math.floor(Math.random() * 10);
 };
 
-const compareGuesses = (userNum, compNum, targetNum) => {
+const compareGuesses = (userGuess, compGuess, targetNum) => {
   let userDiff;
   let compDiff;
   let outcome;
 
   //user result:
-  if (userNum >= targetNum) {
-    userDiff = userNum - targetNum;
-  } else if (targetNum > userNum) {
-    userDiff = targetNum - userNum;
+  if (userGuess >= targetNum) {
+    userDiff = userGuess - targetNum;
+  } else {
+    userDiff = targetNum - userGuess;
   }
 
   //computer result:
-  if (compNum >= targetNum) {
-    compDiff = compNum - targetNum;
-  } else if (targetNum > compNum) {
-    compDiff = targetNum - compNum;
+  if (compGuess >= targetNum) {
+    compDiff = compGuess - targetNum;
+  } else {
+    compDiff = targetNum - compGuess;
   }
 
   //calculate outcome:
@@ -37,7 +36,7 @@ const compareGuesses = (userNum, compNum, targetNum) => {
 };
 
 const updateScore = (winner) => {
-  if ((winner == "human")) {
+  if (winner == "human") {
     humanScore++;
   } else {
     computerScore++;
@@ -46,4 +45,11 @@ const updateScore = (winner) => {
 
 const advanceRound = () => {
   currentRoundNumber++;
+};
+
+const getAbsoluteDistance = (userGuess, compGuess, targetNum) => {
+  let userDiff = Math.abs(userGuess - targetNum);
+  let compDiff = Math.abs(compGuess - targetNum);
+  console.log(`User diff = ${userDiff}`);
+  console.log(`Comp diff = ${compDiff}`);
 };
