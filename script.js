@@ -12,6 +12,10 @@ const getAbsoluteDistance = (a, b) => {
 };
 
 const compareGuesses = (userGuess, compGuess, targetNum) => {
+  if (userGuess >= 10) {
+    alert("Invalid guess!");
+    return;
+  }
   let outcome;
 
   //user result:
